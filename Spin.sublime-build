@@ -1,14 +1,24 @@
 {
-  "cmd": ["bstc", "${file}"],
-  //"file_regex": "^(..[^:]*):([0-9]+):?([0-9]+)?:? (.*)$",
+  "cmd": ["bstc -L \"${project_path:$folder}/lib\" ${file}"],
+  "path": "/usr/local/bin",
+  "file_regex": "(.*?) - Error at \\((.*?),",
+  "line_regex": "\\((.*?),",
   "working_dir": "${file_path}",
-  //"selector": "source.spin",
+  "selector": "source.spin",
+  "shell": true,
+
+  "windows":
+  {
+    "cmd": ["C:\\Windows\\System32\\bstc.exe -L \"${file_path}\\lib\" ${file}"]
+  },
 
   "variants":
   [
     {
       "name": "Run",
-      "cmd": ["bstc", "${file}", "-p2", "-L", "${file_path}/lib/*.*"]
+      "cmd": ["/usr/local/bin/bstc -p2 -L \"${file_path}/lib\" ${file}"],
+      "shell": true
+      //"cmd": ["echo", "${file}", "-p2", "-L", "${file_path}/lib/FullDuplexSerial.spin"]
     }
   ]
 }
