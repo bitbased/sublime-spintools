@@ -3,11 +3,6 @@ that properly highlights and indents Parallax Propeller Spin source code.
 
 ## Installation
 
-### With package control (recommended)
-
-Use [Sublime Package Control](http://wbond.net/sublime_packages/package_control),
-the package is called `spintools`.
-
 ### Manually
 
 1. Download the [package](https://github.com/downloads/bitbased/sublime-spintools/spintools.sublime-package).
