@@ -60,13 +60,13 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i:(%\h*)L)</string>
+			<string>(?i:(%[0-9A-Fa-f]*)L)</string>
 			<key>name</key>
 			<string>constant.numeric.integer.long.hexadecimal.spin</string>
 		</dict>
     <dict>
       <key>match</key>
-      <string>(?i:(\$[\h_]*)|(%[01_]*))</string>
+      <string>(?i:(\$[0-9A-Fa-f_]*)|(%[01_]*))</string>
       <key>name</key>
       <string>constant.numeric.integer.hexadecimal.spin</string>
     </dict>
